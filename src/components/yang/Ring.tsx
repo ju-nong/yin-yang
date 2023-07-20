@@ -11,10 +11,8 @@ function Ring() {
             t += delta; // increment time
             const radius = 1; // radius of the circle
 
-            myMesh.current.position.x = radius * Math.cos(t);
-            myMesh.current.position.z = radius * Math.sin(t);
-
-            myMesh.current.rotation.x = 67.5; // mesh 를 회전 시킴
+            myMesh.current.position.x = radius * Math.cos(t) * -1;
+            myMesh.current.position.y = radius * Math.sin(t) * -1;
         }
     });
 
@@ -24,7 +22,7 @@ function Ring() {
             <ringGeometry args={[0.25, 1, 32]} />
 
             {/* 색깔을 검정색으로 뒷면도 보이게 side=2 */}
-            <meshStandardMaterial color={"black"} side={2} />
+            <meshStandardMaterial side={2} />
         </mesh>
     );
 }

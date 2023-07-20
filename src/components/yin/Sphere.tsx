@@ -11,21 +11,20 @@ function Sphere() {
             t += delta; // increment time
             const radius = 1; // radius of the circle
 
-            myMesh.current.position.x = radius * Math.cos(t);
-            myMesh.current.position.y = radius * Math.sin(t);
+            myMesh.current.position.x = radius * Math.cos(t) * -1;
+            myMesh.current.position.z = radius * Math.sin(t) * -1;
+
+            myMesh.current.rotation.x = 67.5; // mesh 를 회전 시킴
         }
     });
 
     return (
         <mesh ref={myMesh}>
-            {/* 정사면체 */}
-            {/* <boxGeometry args={[1, 1, 1]} /> */}
-
             {/* 구 */}
-            <sphereGeometry args={[0.2, 32, 32]} />
+            <circleGeometry args={[0.2, 32, 32]} />
 
-            {/* 입체로 만듦 */}
-            {/* <meshStandardMaterial /> */}
+            {/* 색깔을 검정색으로 뒷면도 보이게 side=2 */}
+            <meshStandardMaterial color={"black"} side={2} />
         </mesh>
     );
 }
