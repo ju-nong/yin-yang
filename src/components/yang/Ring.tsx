@@ -22,6 +22,7 @@ function Ring() {
             <ringGeometry args={[0.25, 0.95, 32]} />
 
             {/* 색깔을 검정색으로 뒷면도 보이게 side=2 */}
+
             <meshStandardMaterial side={2} />
         </mesh>
     );
