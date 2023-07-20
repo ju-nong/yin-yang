@@ -1,8 +1,9 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import { Mesh } from "three";
 
 function Sphere() {
-    const myMesh = useRef(null);
+    const myMesh = useRef<Mesh>(null);
     let t = 0;
 
     useFrame((_, delta) => {
