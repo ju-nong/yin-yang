@@ -13,7 +13,8 @@ function Ring() {
 
             myMesh.current.position.x = radius * Math.cos(t) * -1;
             myMesh.current.position.z = radius * Math.sin(t) * -1;
-            myMesh.current.rotation.x = 90; // mesh 를 회전 시킴
+
+            myMesh.current.rotation.x = 67.5; // mesh 를 회전 시킴
         }
     });
 
