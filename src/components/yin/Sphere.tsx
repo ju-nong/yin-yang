@@ -8,7 +8,7 @@ function Sphere() {
 
     useFrame((_, delta) => {
         if (myMesh.current) {
-            t += delta; // increment time
+            t -= delta; // increment time
             const radius = 1; // radius of the circle
 
             myMesh.current.position.x = radius * Math.cos(t) * -1;
